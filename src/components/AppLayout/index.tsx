@@ -7,6 +7,7 @@ const AppLayout: React.FC = () => {
       <div className="header">
         <h1>My App</h1>
       </div>
+      <div className="small-banner"><h2>Smaller Banner</h2></div>
       <div className="banner"><h2>Banner</h2></div>
       <div className="left-aside"><h2>Left aside</h2></div>
       <div className="main">

@@ -1,24 +1,26 @@
 .layoutContainer { 
     display: grid;
-    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-rows: auto auto auto 1fr auto auto;
     grid-template-columns: 1fr 3fr;
     min-height: 100vh;
     grid-template-areas:    
     "header header"
+    "small-banner small-banner"
     "banner banner"
     "left-aside main"
     "left-aside low-content"
     "footer footer";
-    grid-gap: 10px;
+    grid-gap: 5px;
     padding: 10px;
     font-weight: 600;
     font-size: 16px;
 
     @media (max-width: 768px) {
-        grid-template-rows: auto auto auto 1fr auto auto;
+        grid-template-rows: auto auto auto auto 1fr auto auto;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header"
+        "small-banner"
         "banner"
         "left-aside"
         "main"
@@ -35,13 +37,18 @@
         grid-area: header; 
         background-color: #FF9AA2; // Light red
     }
+
+    .small-banner { 
+        grid-area: small-banner; 
+        background-color: #971212; // Light gray
+    }
     .banner { 
         grid-area: banner; 
         background-color: #FFB7B2;
         width: 90%; // Adjust width as needed
         margin: 0 auto; // Center horizontally
         position: absolute; // Position absolutely
-        top: 80px; // Adjust to intersect with header
+        top: 150px; // Adjust to intersect with header
         left: 0;
         right: 0;
         height: 100px; // Adjust as needed
